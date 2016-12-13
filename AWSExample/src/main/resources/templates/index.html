@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>AWS Example App</title>
+  </head>
+  <body>
+    <h1 th:text="${hello}"></h1>
+    <p>Welcome to the AWS Example App</p>
+    
+    <div th:each="user : ${users}" th:inline="text">
+      User Id: [[${user.id}]]<br/>
+      Username: [[${user.username}]]<br/>
+      Password: [[${user.password}]]
+    </div>
+  </body>
+</html>
